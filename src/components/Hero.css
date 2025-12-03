@@ -151,6 +151,13 @@
   justify-content: center;
   cursor: pointer;
   animation: bounce 2s infinite;
+  padding: 0;
+}
+
+.scroll-indicator svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 .scroll-indicator:hover {

@@ -11,7 +11,7 @@ const Hero = ({ personalData }) => {
   };
 
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="container hero-content">
         <div className="hero-text">
           <h1 className="hero-title">Hi, I'm {personalData.name}</h1>
@@ -26,10 +26,10 @@ const Hero = ({ personalData }) => {
           </div>
 
           <div className="social-links">
-            <a href={personalData.social.github} target="_blank" rel="noopener noreferrer" title="GitHub">
+            <a href="https://github.com/harjotsingh3878" target="_blank" rel="noopener noreferrer" title="GitHub">
               <FaGithub />
             </a>
-            <a href={personalData.social.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/harjotsingh3878/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
               <FaLinkedin />
             </a>
             <a href={`mailto:${personalData.email}`} title="Email">

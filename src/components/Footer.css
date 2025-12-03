@@ -33,7 +33,13 @@
   justify-content: center;
   cursor: pointer;
   transition: var(--transition);
-  font-size: 1rem;
+  padding: 0;
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .back-to-top:hover {

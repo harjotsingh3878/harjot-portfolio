@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
 
@@ -10,24 +9,32 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    setIsOpen(false);
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="header">
       <div className="container header-content">
-        <Link to="/" className="logo">
+        <button className="logo" onClick={() => scrollToSection('hero')} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
           <span className="logo-text">Harjot Singh</span>
-        </Link>
+        </button>
 
         <button className="menu-toggle" onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         <nav className={`nav ${isOpen ? 'active' : ''}`}>
-          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="#about" onClick={() => setIsOpen(false)}>About</Link>
-          <Link to="#experience" onClick={() => setIsOpen(false)}>Experience</Link>
-          <Link to="#skills" onClick={() => setIsOpen(false)}>Skills</Link>
-          <Link to="#education" onClick={() => setIsOpen(false)}>Education</Link>
-          <Link to="#contact" onClick={() => setIsOpen(false)}>Contact</Link>
+          <button onClick={() => scrollToSection('hero')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Home</button>
+          <button onClick={() => scrollToSection('about')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>About</button>
+          <button onClick={() => scrollToSection('experience')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Experience</button>
+          <button onClick={() => scrollToSection('skills')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Skills</button>
+          <button onClick={() => scrollToSection('education')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Education</button>
+          <button onClick={() => scrollToSection('contact')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Contact</button>
         </nav>
       </div>
     </header>
