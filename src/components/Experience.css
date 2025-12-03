@@ -1,0 +1,204 @@
+.experience-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--highlight-color), var(--accent-color));
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 100px;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.experience-item:hover {
+  opacity: 1;
+}
+
+.experience-item.current {
+  opacity: 1;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 12px;
+  top: 5px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--highlight-color);
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.experience-item.current .timeline-marker {
+  width: 46px;
+  height: 46px;
+  left: 7px;
+  top: 0;
+  box-shadow: 0 0 0 4px rgba(233, 69, 96, 0.2);
+}
+
+.experience-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 3px solid var(--highlight-color);
+  transition: var(--transition);
+}
+
+.experience-item:hover .experience-content {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(10px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.experience-title-section h3 {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.company-info {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(234, 234, 234, 0.8);
+  flex-wrap: wrap;
+}
+
+.company-info .icon,
+.date-badge .icon {
+  margin-right: 0.5rem;
+  color: var(--highlight-color);
+}
+
+.date-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(233, 69, 96, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: var(--highlight-color);
+  white-space: nowrap;
+}
+
+.current-badge {
+  background: var(--highlight-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.responsibilities {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.responsibilities li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: rgba(234, 234, 234, 0.9);
+  line-height: 1.6;
+}
+
+.responsibilities li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--highlight-color);
+}
+
+.technologies {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-label {
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.2), rgba(15, 52, 96, 0.2));
+  color: var(--text-light);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  transition: var(--transition);
+}
+
+.tech-tag:hover {
+  background: rgba(233, 69, 96, 0.3);
+  border-color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    left: 15px;
+  }
+
+  .experience-item {
+    padding-left: 60px;
+  }
+
+  .timeline-marker {
+    left: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  .experience-item.current .timeline-marker {
+    width: 36px;
+    height: 36px;
+    left: -3px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .date-badge {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .responsibilities li {
+    font-size: 0.95rem;
+  }
+}
