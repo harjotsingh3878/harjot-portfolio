@@ -10,11 +10,11 @@ export const portfolioData = {
   experience: [
     {
       id: 1,
-      company: "Telus International",
-      location: "Toronto, ON",
+      company: "Citi",
+      location: "Mississuaga, ON",
       position: "Software Developer",
       startDate: "Oct 2022",
-      endDate: "Dec 2025",
+      endDate: "Present",
       current: true,
       responsibilities: [
         "Designed and developed high-performance SPAs using React, Hooks, Redux, and TypeScript, improving application responsiveness and maintainability.",
@@ -141,8 +141,8 @@ export const portfolioData = {
     }
   ],
   social: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    github: "https://github.com/harjotsingh3878",
+    linkedin: "https://www.linkedin.com/in/harjotsingh3878/",
     email: "harjotsingh538@gmail.com"
   }
 };
