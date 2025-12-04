@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio web application built with Next.js 14, React 18, and TypeScript showcasing professional experience, skills, education, and contact information.
 
+🌐 **Live Demo**: [https://portfolio-harjot-singh.netlify.app/](https://portfolio-harjot-singh.netlify.app/)
+
 ## Features
 
 - **Hero Section**: Eye-catching introduction with call-to-action buttons
