@@ -1,6 +1,6 @@
 # Harjot Singh - Professional Portfolio
 
-A modern, responsive portfolio web application built with React showcasing professional experience, skills, education, and contact information.
+A modern, responsive portfolio web application built with Next.js 14, React 18, and TypeScript showcasing professional experience, skills, education, and contact information.
 
 ## Features
 
@@ -13,24 +13,28 @@ A modern, responsive portfolio web application built with React showcasing profe
 - **Responsive Design**: Fully optimized for mobile, tablet, and desktop
 - **Smooth Navigation**: Sticky header with smooth scroll behavior
 - **Modern UI**: Gradient backgrounds, animations, and hover effects
+- **Type-Safe**: Full TypeScript support for better developer experience
 
 ## Tech Stack
 
-- React 17.0.2
-- React Router DOM 5.2.0
-- React Icons 4.2.0
-- CSS3 (Modern Features: Grid, Flexbox, Gradients, Animations)
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript 5.3
+- **UI Library**: React 18.3
+- **Icons**: React Icons 5.0
+- **Styling**: CSS3 (Modern Features: Grid, Flexbox, Gradients, Animations)
+- **Deployment**: Netlify (via GitHub Actions CI/CD)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js and npm installed
+- Node.js 18+ and npm installed
 
 ### Installation
 
-1. Navigate to the project directory:
+1. Clone the repository:
    ```bash
+   git clone https://github.com/harjotsingh3878/harjot-portfolio.git
    cd harjot-portfolio
    ```
 
@@ -42,6 +46,13 @@ A modern, responsive portfolio web application built with React showcasing profe
 ### Running the App
 
 ```bash
+# Development server
+npm run dev
+
+# Production build
+npm run build
+
+# Start production server
 npm start
 ```
 
@@ -51,28 +62,30 @@ The app will open at [http://localhost:3000](http://localhost:3000) in your brow
 
 ```
 src/
-├── components/          # Reusable components
-│   ├── Header.js       # Navigation header
-│   ├── Hero.js         # Hero section
-│   ├── About.js        # About section
-│   ├── Experience.js   # Experience timeline
-│   ├── Skills.js       # Skills grid
-│   ├── Education.js    # Education cards
-│   ├── Contact.js      # Contact form
-│   ├── Footer.js       # Footer
+├── app/                # Next.js App Router
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Home page
+│   └── globals.css     # Global styles
+├── components/         # React components (TypeScript)
+│   ├── Header.tsx      # Navigation header
+│   ├── Hero.tsx        # Hero section
+│   ├── About.tsx       # About section
+│   ├── Experience.tsx  # Experience timeline
+│   ├── Skills.tsx      # Skills grid
+│   ├── Education.tsx   # Education cards
+│   ├── Contact.tsx     # Contact form
+│   ├── Footer.tsx      # Footer
 │   └── *.css           # Component styles
-├── styles/             # Global styles
-│   └── globals.css     # Global CSS variables and base styles
-├── data.js             # Portfolio data (resume information)
-├── App.js              # Main app component
-└── index.js            # React entry point
+├── types/              # TypeScript type definitions
+│   └── portfolio.ts    # Portfolio data types
+└── data.ts             # Portfolio data (resume information)
 ```
 
 ## Customization
 
 ### Update Your Information
 
-Edit `src/data.js` to update:
+Edit `src/data.ts` to update:
 - Personal information (name, email, phone, location)
 - Professional summary
 - Work experience and responsibilities
@@ -82,7 +95,7 @@ Edit `src/data.js` to update:
 
 ### Styling
 
-All colors and design tokens are defined as CSS variables in `src/styles/globals.css`:
+All colors and design tokens are defined as CSS variables in `src/app/globals.css`:
 - `--primary-color`: Main dark color
 - `--highlight-color`: Accent/highlight color (red)
 - `--accent-color`: Secondary color (blue)
@@ -134,18 +147,42 @@ Change these variables to customize the entire design.
 ## Available Scripts
 
 ```bash
-# Start development server
-npm start
+# Start development server with hot reload
+npm run dev
 
-# Build for production
+# Build for production (static export)
 npm run build
 
-# Run tests
-npm test
+# Start production server
+npm start
 
-# Eject configuration (one-way operation)
-npm run eject
+# Run Next.js linter
+npm run lint
 ```
+
+## CI/CD & Deployment
+
+This project uses GitHub Actions for automated deployment to Netlify:
+
+1. **Automatic Builds**: Every push to `main` triggers a build
+2. **Static Export**: Next.js builds a static site to `out/` directory
+3. **Netlify Deployment**: Automatically deploys to Netlify
+
+### Setup Netlify Deployment
+
+1. Create a Netlify account and site
+2. Add GitHub repository secrets:
+   - `NETLIFY_AUTH_TOKEN`: Your Netlify personal access token
+   - `NETLIFY_SITE_ID`: Your Netlify site ID
+3. Push to `main` branch to trigger deployment
+
+## TypeScript
+
+This project uses TypeScript for type safety:
+
+- All components are written in `.tsx` format
+- Type definitions are in `src/types/portfolio.ts`
+- Strict mode enabled for maximum type safety
 
 ## Browser Support
 
@@ -165,11 +202,22 @@ The portfolio is fully responsive with breakpoints at:
 
 - [ ] Add projects/portfolio section
 - [ ] Implement dark mode toggle
-- [ ] Add blog section
+- [ ] Add blog section (MDX support)
 - [ ] Integrate email service for contact form
 - [ ] Add PDF resume download
 - [ ] Add animations library (Framer Motion)
 - [ ] Add testimonials section
+- [ ] SEO optimization with Next.js metadata
+- [ ] Add analytics (Google Analytics/Vercel Analytics)
+
+## Migration from CRA to Next.js
+
+This project was migrated from Create React App to Next.js 14:
+- ✅ React 17 → React 18
+- ✅ JavaScript → TypeScript
+- ✅ React Router → Next.js App Router
+- ✅ Client-side rendering → Static Site Generation
+- ✅ Added CI/CD pipeline with GitHub Actions
 
 ## License
 
@@ -177,8 +225,10 @@ This project is open source and available under the MIT License.
 
 ## Author
 
-Harjot Singh - Full Stack Developer
+**Harjot Singh** - Full Stack Software Developer  
+📧 harjotsingh538@gmail.com  
+🔗 [GitHub](https://github.com/harjotsingh3878) | [LinkedIn](https://www.linkedin.com/in/harjotsingh3878/)
 
 ---
 
-Built with React ❤️
+Built with Next.js 14, React 18, and TypeScript ❤️
