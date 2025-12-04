@@ -28,6 +28,8 @@ jobs:
       
       - name: Build project
         run: npm run build
+        env:
+          GENERATE_SOURCEMAP: false
       
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2.0
@@ -42,4 +44,3 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
