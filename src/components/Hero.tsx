@@ -1,8 +1,15 @@
+'use client';
+
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
+import { PersonalData } from '../types/portfolio';
 import './Hero.css';
 
-const Hero = ({ personalData }) => {
+interface HeroProps {
+  personalData: PersonalData;
+}
+
+const Hero: React.FC<HeroProps> = ({ personalData }) => {
   const scrollToSection = () => {
     const aboutSection = document.querySelector('#about');
     if (aboutSection) {
@@ -45,7 +52,7 @@ const Hero = ({ personalData }) => {
         </div>
       </div>
 
-      <button className="scroll-indicator" onClick={scrollToSection}>
+      <button className="scroll-indicator" onClick={scrollToSection} aria-label="Scroll to next section">
         <FaArrowDown />
       </button>
     </section>

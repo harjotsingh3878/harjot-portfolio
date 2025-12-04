@@ -1,8 +1,15 @@
+'use client';
+
 import React from 'react';
 import { FaGraduationCap, FaCalendar, FaMapMarkerAlt } from 'react-icons/fa';
+import { Education } from '../types/portfolio';
 import './Education.css';
 
-const Education = ({ education }) => {
+interface EducationProps {
+  education: Education[];
+}
+
+const EducationComponent: React.FC<EducationProps> = ({ education }) => {
   return (
     <section id="education" className="section section-dark education">
       <div className="container">
@@ -35,4 +42,4 @@ const Education = ({ education }) => {
   );
 };
 
-export default Education;
+export default EducationComponent;

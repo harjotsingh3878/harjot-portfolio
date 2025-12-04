@@ -36,3 +36,9 @@ lerna-debug.log*
 # OS
 Thumbs.db
 *.log
+
+# Next.js
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts

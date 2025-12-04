@@ -1,7 +1,14 @@
+'use client';
+
 import React from 'react';
+import { Skills } from '../types/portfolio';
 import './Skills.css';
 
-const Skills = ({ skills }) => {
+interface SkillsProps {
+  skills: Skills;
+}
+
+const SkillsComponent: React.FC<SkillsProps> = ({ skills }) => {
   const skillCategories = [
     { title: 'Frontend', items: skills.frontend },
     { title: 'Backend', items: skills.backend },
@@ -33,4 +40,4 @@ const Skills = ({ skills }) => {
   );
 };
 
-export default Skills;
+export default SkillsComponent;

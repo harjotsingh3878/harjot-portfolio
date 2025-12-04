@@ -1,14 +1,21 @@
+'use client';
+
 import React from 'react';
 import { FaBriefcase, FaCalendar, FaMapMarkerAlt } from 'react-icons/fa';
+import { Experience } from '../types/portfolio';
 import './Experience.css';
 
-const Experience = ({ experiences }) => {
+interface ExperienceProps {
+  experiences: Experience[];
+}
+
+const ExperienceComponent: React.FC<ExperienceProps> = ({ experiences }) => {
   return (
     <section id="experience" className="section section-dark experience">
       <div className="container">
         <h2>Professional Experience</h2>
         <div className="experience-timeline">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp) => (
             <div key={exp.id} className={`experience-item ${exp.current ? 'current' : ''}`}>
               <div className="timeline-marker"></div>
               
@@ -55,4 +62,4 @@ const Experience = ({ experiences }) => {
   );
 };
 
-export default Experience;
+export default ExperienceComponent;

@@ -1,4 +1,6 @@
-export const portfolioData = {
+import { PortfolioData } from './types/portfolio';
+
+export const portfolioData: PortfolioData = {
   personal: {
     name: "HARJOT SINGH",
     title: "Full Stack Software Developer",

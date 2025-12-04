@@ -1,15 +1,17 @@
+'use client';
+
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     setIsOpen(false);
     const section = document.getElementById(sectionId);
     if (section) {
@@ -24,7 +26,7 @@ const Header = () => {
           <span className="logo-text">Harjot Singh</span>
         </button>
 
-        <button className="menu-toggle" onClick={toggleMenu}>
+        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
 

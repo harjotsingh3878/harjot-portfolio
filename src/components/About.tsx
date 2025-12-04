@@ -1,7 +1,14 @@
+'use client';
+
 import React from 'react';
+import { PersonalData } from '../types/portfolio';
 import './About.css';
 
-const About = ({ personalData }) => {
+interface AboutProps {
+  personalData: PersonalData;
+}
+
+const About: React.FC<AboutProps> = ({ personalData }) => {
   return (
     <section id="about" className="section about">
       <div className="container">

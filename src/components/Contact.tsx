@@ -1,11 +1,18 @@
+'use client';
+
 import React, { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaCheckCircle } from 'react-icons/fa';
+import { PersonalData } from '../types/portfolio';
 import './Contact.css';
 
-const Contact = ({ personalData }) => {
-  const [submitted, setSubmitted] = useState(false);
+interface ContactProps {
+  personalData: PersonalData;
+}
 
-  const handleSubmit = (e) => {
+const Contact: React.FC<ContactProps> = ({ personalData }) => {
+  const [submitted, setSubmitted] = useState<boolean>(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
@@ -81,7 +88,7 @@ const Contact = ({ personalData }) => {
               <textarea 
                 id="message" 
                 name="message" 
-                rows="5" 
+                rows={5}
                 placeholder="Your message..."
                 required
               ></textarea>
