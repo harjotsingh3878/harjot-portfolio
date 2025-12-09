@@ -123,7 +123,7 @@ export const portfolioData: PortfolioData = {
       title: "E-Commerce Platform",
       description: "A full-featured e-commerce platform with product catalog, shopping cart, user authentication, and checkout functionality. Built with modern web technologies for optimal performance and user experience.",
       demoUrl: "https://ecommerce-platform-nine-sigma.vercel.app/products",
-      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "GitHub Actions", "Vercel", "Render"],
       featured: true
     }
   ],
