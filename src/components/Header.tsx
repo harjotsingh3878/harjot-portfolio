@@ -34,6 +34,7 @@ const Header: React.FC = () => {
           <button onClick={() => scrollToSection('hero')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Home</button>
           <button onClick={() => scrollToSection('about')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>About</button>
           <button onClick={() => scrollToSection('experience')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Experience</button>
+          <button onClick={() => scrollToSection('projects')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Projects</button>
           <button onClick={() => scrollToSection('skills')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Skills</button>
           <button onClick={() => scrollToSection('education')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Education</button>
           <button onClick={() => scrollToSection('contact')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Contact</button>

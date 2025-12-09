@@ -117,6 +117,16 @@ export const portfolioData: PortfolioData = {
       technologies: ["Adobe Experience Manager", "HTML5", "CSS3", "JavaScript", "jQuery", "JIRA"]
     }
   ],
+  projects: [
+    {
+      id: 1,
+      title: "E-Commerce Platform",
+      description: "A full-featured e-commerce platform with product catalog, shopping cart, user authentication, and checkout functionality. Built with modern web technologies for optimal performance and user experience.",
+      demoUrl: "https://ecommerce-platform-nine-sigma.vercel.app/products",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+      featured: true
+    }
+  ],
   skills: {
     frontend: ["React", "Redux", "TypeScript", "JavaScript (ES6+)", "HTML", "CSS", "Storybook"],
     backend: ["Node.js", "Express.js", "REST APIs", "GraphQL"],

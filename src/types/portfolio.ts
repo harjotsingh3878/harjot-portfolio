@@ -19,6 +19,17 @@ export interface Experience {
   technologies: string[];
 }
 
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image?: string;
+  demoUrl: string;
+  githubUrl?: string;
+  technologies: string[];
+  featured: boolean;
+}
+
 export interface Skills {
   frontend: string[];
   backend: string[];
@@ -46,6 +57,7 @@ export interface Social {
 export interface PortfolioData {
   personal: PersonalData;
   experience: Experience[];
+  projects: Project[];
   skills: Skills;
   education: Education[];
   social: Social;
