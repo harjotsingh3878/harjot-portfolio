@@ -125,15 +125,23 @@ export const portfolioData: PortfolioData = {
       demoUrl: "https://ecommerce-platform-nine-sigma.vercel.app/products",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "GitHub Actions", "Vercel", "Render"],
       featured: true
+    },
+    {
+      id: 2,
+      title: "AI Travel Planner",
+      description: "A full-stack AI-powered travel planning application built with Next.js 15, Google Gemini/OpenAI, Supabase, and TypeScript. Generate personalized itineraries with detailed day-by-day plans, track your travel history, and visualize your spending with beautiful analytics dashboards.",
+      demoUrl: "https://ai-travel-planner-chi-seven.vercel.app",
+      technologies: ["Next.js", "TypeScript", "Google Gemini", "OpenAI", "Supabase", "Tailwind CSS", "Vercel"],
+      featured: true
     }
   ],
   skills: {
-    frontend: ["React", "Redux", "TypeScript", "JavaScript (ES6+)", "HTML", "CSS", "Storybook"],
+    frontend: ["React", "Next.js", "Redux", "TypeScript", "JavaScript (ES6+)", "HTML", "CSS", "Tailwind CSS", "Storybook"],
     backend: ["Node.js", "Express.js", "REST APIs", "GraphQL"],
     databases: ["PostgreSQL", "MongoDB", "Cassandra"],
     testing: ["React Testing Library", "Jest"],
     cloudDevOps: ["GCP", "Docker", "GitHub Actions"],
-    tools: ["Git", "GitHub", "Bitbucket", "Postman", "Webpack", "NPM", "Figma", "JIRA"],
+    tools: ["Git", "GitHub", "Bitbucket", "Postman", "Webpack", "NPM", "Figma", "JIRA", "Lightspeed"],
     methodologies: ["Agile", "Scrum", "CI/CD"]
   },
   education: [
